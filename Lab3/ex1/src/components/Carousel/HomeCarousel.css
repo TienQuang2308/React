@@ -1,0 +1,110 @@
+/* src/components/home/HomeCarousel.css */
+
+/* --- Bố cục khung Carousel --- */
+.cinema-carousel-wrapper {
+  position: relative;
+  overflow: hidden;
+  background: #000;
+}
+
+.cinema-carousel {
+  width: 100%;
+  max-height: 500px;
+}
+
+/* --- Hình ảnh: hiển thị trọn vẹn, không crop --- */
+.carousel-img {
+  width: 100%;
+  height: 500px;
+  object-fit: contain; /* ✅ hiển thị toàn bộ hình */
+  background-color: #000;
+  transition: transform 4s ease;
+  filter: brightness(0.9) contrast(1.1);
+}
+
+.carousel-item.active .carousel-img {
+  transform: scale(1.02);
+}
+
+/* --- Lớp phủ mờ nhẹ --- */
+.carousel-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.75), rgba(0,0,0,0.2));
+}
+
+/* --- Chữ và nội dung --- */
+.carousel-caption-custom {
+  bottom: 60px;
+  left: 5%;
+  max-width: 720px;
+  text-shadow: 0 2px 10px rgba(0,0,0,0.8);
+}
+
+.carousel-title {
+  font-family: "Orbitron", sans-serif;
+  font-weight: 700;
+  font-size: 2rem;
+  color: #fff;
+  margin-bottom: 0.5rem;
+}
+
+.carousel-desc {
+  font-size: 1rem;
+  color: #ddd;
+  margin-bottom: 1rem;
+  line-height: 1.5;
+}
+
+.btn-watch-now {
+  background: linear-gradient(90deg, #ff416c, #ff4b2b);
+  border: none;
+  color: white;
+  font-weight: 600;
+  border-radius: 30px;
+  padding: 0.6rem 1.5rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 15px rgba(255, 65, 108, 0.6);
+}
+
+.btn-watch-now:hover {
+  transform: translateY(-2px);
+  background: linear-gradient(90deg, #ff4b2b, #ff416c);
+}
+
+/* --- Hiệu ứng ánh sáng nhẹ --- */
+.cinema-light {
+  position: absolute;
+  top: -120px;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, rgba(255,255,255,0.15), transparent 70%);
+  filter: blur(60px);
+  transform: translateX(-50%);
+  animation: light-move 5s ease-in-out infinite alternate;
+  pointer-events: none;
+}
+
+@keyframes light-move {
+  from { transform: translate(-50%, 0) scale(1); opacity: 0.8; }
+  to { transform: translate(-40%, 10px) scale(1.1); opacity: 0.6; }
+}
+
+/* --- Mũi tên điều hướng --- */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-color: rgba(255,255,255,0.8);
+  border-radius: 50%;
+  width: 45px;
+  height: 45px;
+  background-size: 60%;
+  filter: drop-shadow(0 0 5px rgba(0,0,0,0.7));
+  transition: all 0.3s ease;
+}
+
+.carousel-control-prev-icon:hover,
+.carousel-control-next-icon:hover {
+  background-color: #ff4b2b;
+  transform: scale(1.1);
+}

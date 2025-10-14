@@ -1,0 +1,21 @@
+.account-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 40px;
+  background-color: #000;
+  min-height: 100vh;
+}
+
+.account-card {
+  background-color: #111;
+  color: white;
+  width: 500px;
+  border-radius: 16px;
+}
+
+.step-labels {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.9rem;
+}

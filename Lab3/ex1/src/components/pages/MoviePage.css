@@ -1,0 +1,68 @@
+/* src/components/pages/MoviePage.css */
+
+/* Lưới phim */
+.movie-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  justify-items: center;
+}
+
+/* Tiêu đề Featured Movies */
+h4.fw-bold.text-danger {
+  font-size: 1.8rem;
+}
+
+/* Container spacing */
+.my-5 {
+  margin-top: 3rem !important;
+  margin-bottom: 3rem !important;
+}
+
+/* Card Movie căn giữa, responsive */
+.movie-card {
+  width: 100%;
+  max-width: 250px;
+  text-align: center;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.movie-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+}
+
+/* Poster */
+.movie-card img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Title */
+.movie-card h5 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin: 10px 0 5px;
+}
+
+/* Description */
+.movie-card p {
+  font-size: 0.9rem;
+  color: #555;
+  padding: 0 10px 10px;
+}
+
+/* Genre badge */
+.movie-card .genre {
+  display: inline-block;
+  background-color: #f1f1f1;
+  color: #333;
+  padding: 3px 8px;
+  font-size: 0.8rem;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
