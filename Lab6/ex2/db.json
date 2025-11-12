@@ -1,0 +1,24 @@
+{
+  "payments": [
+    {
+      "id": "1",
+      "amount": 100,
+      "status": "SUCCESS"
+    },
+    {
+      "id": "2",
+      "amount": 50,
+      "status": "FAILED"
+    },
+    {
+      "id": "29f7",
+      "amount": 15000,
+      "status": "SUCCESS"
+    },
+    {
+      "id": "0ea6",
+      "amount": 0,
+      "status": "SUCCESS"
+    }
+  ]
+}
